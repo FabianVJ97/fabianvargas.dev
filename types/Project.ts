@@ -5,4 +5,6 @@ export type Project = {
   technologies: string[];
   status: string;
   href: string;
+  featured?: boolean;
+  image?: string;
 };

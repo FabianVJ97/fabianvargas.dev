@@ -4,10 +4,11 @@ import Link from "next/link";
 import { useState } from "react";
 
 const navLinks = [
-  { label: "Sobre mí", href: "/#sobre-mi" },
-  { label: "Proyectos", href: "/#proyectos" },
-  { label: "Experiencia", href: "/#experiencia" },
-  { label: "Contacto", href: "/#contacto" },
+  { label: "Sobre mí", href: "/sobre-mi" },
+  { label: "Proyectos", href: "/proyectos" },
+  { label: "Experiencia", href: "/experiencia" },
+  { label: "Formación", href: "/formacion" },
+  { label: "Contacto", href: "/contacto" },
 ];
 
 export default function Navbar() {
@@ -18,7 +19,7 @@ export default function Navbar() {
   }
 
   return (
-    <header className="fixed top-0 z-50 w-full border-b border-slate-800 bg-slate-950/90 backdrop-blur-md">
+    <header className = "fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-slate-950/20 backdrop-blur-md">
       <nav className="mx-auto max-w-6xl px-6">
         <div className="flex items-center justify-between py-5">
           <Link

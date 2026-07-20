@@ -3,15 +3,20 @@ import Card from "@/components/ui/Card";
 import Badge from "@/components/ui/Badge";
 import type { Project } from "@/types/Project";
 
+type ProjectCardProps = {
+  project: Project;
+};
 
-export default function ProjectCard({
-  title,
-  category,
-  description,
-  technologies,
-  status,
-  href,
-}: Project) {
+export default function ProjectCard({ project }: ProjectCardProps) {
+  const {
+    title,
+    category,
+    description,
+    technologies,
+    status,
+    href,
+  } = project;
+
   return (
     <Card
       interactive
@@ -24,8 +29,7 @@ export default function ProjectCard({
 
         <Badge variant="outline">
           {status}
-          </Badge>
-
+        </Badge>
       </div>
 
       <h3 className="mt-6 text-2xl font-bold transition group-hover:text-cyan-300">
