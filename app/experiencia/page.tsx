@@ -43,7 +43,9 @@ type Experience = {
   institution: string;
   category:
     | "Docencia"
+    | "Docencia universitaria"
     | "Investigación"
+    | "Gestión de investigación"
     | "Investigación aplicada"
     | "Experiencia profesional"
     | "Ayudantía";
