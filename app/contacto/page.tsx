@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     "Contacto profesional de Fabián Vargas para proyectos de estadística, ciencia de datos, investigación, docencia y aprendizaje automático.",
 };
 
-const email = "tu-correo@ejemplo.com";
+const email = "fabianvj97@gmail.com";
 
 const contactLinks = [
   {
@@ -25,9 +25,9 @@ const contactLinks = [
   },
   {
     label: "LinkedIn",
-    value: "linkedin.com/in/tu-usuario",
+    value: "linkedin.com/in/fovargas",
     description: "Trayectoria profesional, formación y experiencia.",
-    href: "https://www.linkedin.com/in/tu-usuario",
+    href: "https://www.linkedin.com/in/fovargas",
     external: true,
     icon: "linkedin",
   },
@@ -181,7 +181,8 @@ export default function ContactoPage() {
                   <div>
                     <p className="text-sm text-slate-500">Ubicación</p>
                     <p className="mt-2 font-medium text-slate-200">
-                      Chile
+                     Chile
+                      
                     </p>
                   </div>
 

@@ -25,67 +25,76 @@ type EducationItem = {
 };
 
 const educationItems: EducationItem[] = [
+{
+  type: "Postgrado",
+  title: "Magíster en Estadística",
+  institution: "Universidad del Bío-Bío",
+  period: "2026 – Actualidad",
+  description:
+    "Programa de postgrado orientado a la formación avanzada en Estadística, con énfasis en inferencia, modelamiento estadístico, métodos computacionales e investigación científica. Su propósito es profundizar el conocimiento disciplinar y desarrollar competencias para resolver problemas complejos mediante metodologías estadísticas, contribuyendo además al trabajo interdisciplinario y a la generación de nuevo conocimiento.",
+  status: "En curso",
+  featured: true,
+  highlights: [
+    "Inferencia estadística avanzada",
+    "Modelamiento estadístico",
+    "Computación estadística",
+    "Investigación científica",
+    "Trabajo interdisciplinario",
+    "Métodos computacionales",
+  ],
+},
+{
+  type: "Título profesional",
+  title: "Ingeniería Estadística",
+  institution: "Universidad del Bío-Bío",
+  period: "2020 – 2026",
+  description:
+    "Formación profesional orientada al análisis y modelamiento estadístico de fenómenos complejos para apoyar la toma de decisiones. Integra estadística aplicada, ciencia de datos, inteligencia artificial, aprendizaje automático y métodos computacionales, junto con el desarrollo de competencias para el trabajo interdisciplinario, la innovación y el ejercicio ético de la profesión.",
+  status: "Completado",
+  highlights: [
+    "Ciencia de datos",
+    "Aprendizaje automático",
+    "Modelamiento estadístico",
+    "Métodos computacionales",
+    "Análisis de datos",
+    "Toma de decisiones",
+  ],
+},
+{
+  type: "Grado académico",
+  title: "Licenciado en Estadística",
+  institution: "Universidad del Bío-Bío",
+  period: "2026",
+  description:
+    "Grado académico que acredita una sólida formación en fundamentos matemáticos, probabilísticos y estadísticos, proporcionando las bases teóricas y metodológicas para el análisis de datos, la modelación de fenómenos bajo incertidumbre, la simulación y el desarrollo de investigación científica, habilitando además para la continuidad de estudios de postgrado.",
+  status: "Completado",
+  highlights: [
+    "Probabilidad",
+    "Inferencia estadística",
+    "Modelación estadística",
+    "Simulación",
+    "Investigación científica",
+    "Métodos cuantitativos",
+  ],
+},
+
   {
-    type: "Postgrado",
-    title: "Magíster en Estadística",
-    institution: "Universidad del Bío-Bío",
-    period: "2026 – Actualidad",
-    description:
-      "Programa de postgrado orientado al desarrollo de conocimientos avanzados en inferencia, modelamiento estadístico y métodos computacionales.",
-    status: "En curso",
-    featured: true,
-    highlights: [
-      "Inferencia estadística",
-      "Modelamiento avanzado",
-      "Métodos computacionales",
-      "Investigación",
-    ],
-  },
-  {
-    type: "Título profesional",
-    title: "Ingeniería Estadística",
-    institution: "Universidad del Bío-Bío",
-    period: "2020 – 2026",
-    description:
-      "Formación profesional en análisis estadístico, programación, simulación, diseño de experimentos, series de tiempo y ciencia de datos.",
-    status: "Completado",
-    highlights: [
-      "Estadística aplicada",
-      "Simulación",
-      "Ciencia de datos",
-      "Programación",
-    ],
-  },
-  {
-    type: "Grado académico",
-    title: "Licenciado en Estadística",
-    institution: "Universidad del Bío-Bío",
-    period: "2026",
-    description:
-      "Grado académico centrado en los fundamentos matemáticos, probabilísticos y metodológicos de la disciplina estadística.",
-    status: "Completado",
-    highlights: [
-      "Probabilidad",
-      "Inferencia",
-      "Modelos estadísticos",
-      "Metodología científica",
-    ],
-  },
-  {
-    type: "Diplomado",
-    title: "Habilidades Sociales e Inserción Laboral",
-    institution: "Universidad del Bío-Bío",
-    period: "2025",
-    description:
-      "Formación complementaria en comunicación efectiva, trabajo colaborativo, empleabilidad y desarrollo de competencias profesionales.",
-    status: "Completado",
-    highlights: [
-      "Comunicación",
-      "Trabajo en equipo",
-      "Empleabilidad",
-      "Competencias profesionales",
-    ],
-  },
+  type: "Diplomado",
+  title: "Habilidades Sociales e Inserción Laboral",
+  institution: "Universidad del Bío-Bío",
+  period: "2025",
+  description:
+    "Diplomado enfocado en el desarrollo de competencias genéricas para el ejercicio profesional, fortaleciendo habilidades de comunicación efectiva, trabajo colaborativo, inteligencia emocional, ética profesional, responsabilidad social y empleabilidad, junto con herramientas para enfrentar procesos de selección e inserción laboral.",
+  status: "Completado",
+  highlights: [
+    "Comunicación efectiva",
+    "Trabajo colaborativo",
+    "Inteligencia emocional",
+    "Ética profesional",
+    "Responsabilidad social",
+    "Empleabilidad",
+  ],
+}
 ];
 
 const specializationAreas = [
@@ -192,7 +201,7 @@ export default function FormacionPage() {
                       className={`absolute left-0 top-8 hidden h-6 w-6 rounded-full border-4 border-slate-950 md:block ${
                         item.status === "En curso"
                           ? "bg-cyan-400"
-                          : "bg-slate-600"
+                          : "bg-slate-500"
                       }`}
                     />
 
@@ -223,9 +232,15 @@ export default function FormacionPage() {
                             </p>
                           </div>
 
-                          <Badge variant="outline">
+                        <span
+                         className={`rounded-full border px-3 py-1.5 text-sm font-semibold ${
+                         item.status === "En curso"
+                         ? "border-orange-400/40 bg-orange-400/10 text-orange-300"
+                           : "border-green-500/40 bg-green-500/10 text-green-300"
+                          }`}
+                          >
                             {item.status}
-                          </Badge>
+                        </span>
                         </div>
 
                         <h2 className="mt-6 text-2xl font-bold tracking-tight sm:text-3xl">

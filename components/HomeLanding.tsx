@@ -111,7 +111,7 @@ export default function HomeLanding() {
             <div className="grid min-h-[540px] gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
               <div>
                 <p className="text-sm font-semibold uppercase tracking-[0.28em] text-cyan-300">
-                  Ingeniero Estadístico
+                  Portafolio de Fabián Vargas Jiménez
                 </p>
 
                 <h1 className="mt-6 max-w-4xl text-5xl font-bold leading-[1.08] tracking-tight sm:text-6xl lg:text-7xl">
@@ -122,7 +122,7 @@ export default function HomeLanding() {
                 </h1>
 
                 <p className="mt-7 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
-                  Soy Fabián Vargas. Desarrollo soluciones en estadística,
+                  Soy Fabián. Desarrollo soluciones en estadística,
                   ciencia de datos, simulación e inteligencia artificial,
                   integrando rigor metodológico y programación.
                 </p>
