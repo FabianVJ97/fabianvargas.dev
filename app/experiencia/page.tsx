@@ -6,6 +6,31 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import Card from "@/components/ui/Card";
 import Badge from "@/components/ui/Badge";
 
+const gallery = [
+  {
+    image: "/images/gallery/docencia-2026.jpg",
+    title: "Primer curso como docente",
+    description:
+      "Curso de Estadística para Ingeniería en Ejecución Eléctrica e Ingeniería en Ejecución Mecánica.",
+    year: "2026",
+  },
+{
+  image: "/images/gallery/titulacion.jpg",
+  title: "Titulación",
+  description:
+    "Ceremonia de titulación de Ingeniería Estadística, Universidad del Bío-Bío.",
+  year: "2026",
+},
+  {
+    image: "/images/gallery/practica.jpg",
+    title: "Práctica profesional",
+    description:
+      "GeoResource.",
+    year: "2025",
+  },
+];
+
+
 export const metadata: Metadata = {
   title: "Experiencia | Fabián Vargas",
   description:
@@ -36,7 +61,7 @@ const experiences: Experience[] = [
     institution: "Universidad del Bío-Bío",
     category: "Docencia",
     description:
-      "Docencia universitaria en cursos de Estadística para estudiantes de Ingeniería en Ejecución Eléctrica y Mecánica.",
+      "Docencia universitaria en cursos de Estadística para estudiantes de Ingeniería en Ejecución Eléctrica e Ingeniería en Ejecución Mecánica.",
     responsibilities: [
       "Planificación y desarrollo de clases teóricas y prácticas.",
       "Preparación de evaluaciones, guías y material de apoyo.",
@@ -44,56 +69,62 @@ const experiences: Experience[] = [
       "Orientación y retroalimentación académica a estudiantes.",
     ],
     skills: [
-      "Estadística aplicada",
+      "Estadística descriptiva teorica y aplicada",
+      "Calculo de probabilidades teórico y aplicado",
       "Docencia universitaria",
-      "R",
-      "Evaluación",
+      "Comunicación efectiva",
+      "Resolución de problemas",
+      "Trabajo colaborativo"
     ],
     current: true,
     featured: true,
   },
-  {
-    period: "2026 – Actualidad",
-    title: "Apoyo en proyecto de investigación FONDECYT",
-    institution: "Universidad del Bío-Bío",
-    category: "Investigación",
-    description:
-      "Colaboración en actividades de procesamiento de datos, análisis estadístico y apoyo computacional asociadas a un proyecto de investigación.",
-    responsibilities: [
-      "Preparación y depuración de bases de datos.",
-      "Implementación de procedimientos estadísticos.",
-      "Apoyo en simulaciones y análisis computacional.",
-      "Documentación de resultados y procedimientos.",
-    ],
-    skills: [
-      "Investigación",
-      "Análisis estadístico",
-      "Programación",
-      "Procesamiento de datos",
-    ],
-    current: true,
-  },
-  {
-    period: "2025 – 2026",
-    title: "Proyecto de título",
-    institution: "Universidad del Bío-Bío",
-    category: "Investigación aplicada",
-    description:
-      "Desarrollo de un mecanismo de exportación y validación de modelos de redes neuronales feedforward entre MATLAB y Python.",
-    responsibilities: [
-      "Diseño de un formato de exportación de modelos neuronales.",
-      "Reconstrucción de arquitecturas y parámetros en Python.",
-      "Validación de predicciones entre MATLAB y Python.",
-      "Evaluación de métricas y consistencia computacional.",
-    ],
-    skills: [
-      "MATLAB",
-      "Python",
-      "Redes neuronales",
-      "Machine Learning",
-    ],
-    featured: true,
-  },
+{
+  period: "2026 – Actualidad",
+  title: "Personal de apoyo en proyecto de investigación FONDECYT",
+  institution: "Universidad del Bío-Bío",
+  category: "Gestión de investigación",
+  description:
+    "Apoyo en la gestión administrativa y documental de un proyecto FONDECYT, con responsabilidad en la organización, actualización y respaldo de antecedentes necesarios para el seguimiento del proyecto y la rendición de fondos.",
+  responsibilities: [
+    "Organización y actualización permanente de la documentación del proyecto.",
+    "Carga y respaldo de documentos administrativos y financieros.",
+    "Mantención de registros y antecedentes requeridos para la rendición de fondos.",
+    "Revisión del estado de la documentación y seguimiento de antecedentes pendientes.",
+    "Apoyo en la preparación y ordenamiento de respaldos para procesos de rendición.",
+  ],
+  skills: [
+    "Gestión documental",
+    "Rendición de fondos",
+    "Organización administrativa",
+    "Control de antecedentes",
+    "Seguimiento de documentación",
+  ],
+  current: true,
+},
+{
+  period: "2025 – 2026",
+  title: "Proyecto de título",
+  institution: "Universidad del Bío-Bío",
+  category: "Investigación aplicada",
+  description:
+    "Desarrollo de una metodología para el agrupamiento de registros de aceleración sísmica basada en medidas de similitud temporal, considerando criterios de amplitud y morfología para apoyar el análisis y la clasificación de señales sísmicas.",
+  responsibilities: [
+    "Diseño de una metodología para el agrupamiento de registros de aceleración sísmica.",
+    "Análisis y comparación de señales mediante medidas de similitud temporal.",
+    "Evaluación de criterios de amplitud y morfología para la clasificación de registros.",
+    "Implementación computacional y validación de la metodología desarrollada.",
+    "Análisis e interpretación de los resultados obtenidos.",
+  ],
+  skills: [
+    "Análisis de señales",
+    "Series de tiempo",
+    "Métodos estadísticos",
+    "Programación",
+    "Investigación aplicada",
+  ],
+  featured: true,
+},
   {
     period: "2025",
     title: "Práctica profesional",
@@ -115,45 +146,105 @@ const experiences: Experience[] = [
     ],
   },
   {
-    period: "2025",
-    title: "Ayudante de Introducción a la Ingeniería Estadística",
-    institution: "Universidad del Bío-Bío",
-    category: "Ayudantía",
-    description:
-      "Apoyo académico a estudiantes en contenidos introductorios de la carrera y en el desarrollo de actividades formativas.",
-    responsibilities: [
-      "Resolución y explicación de ejercicios.",
-      "Acompañamiento en actividades prácticas.",
-      "Orientación metodológica a estudiantes.",
-      "Apoyo en la preparación de material académico.",
-    ],
-    skills: [
-      "Comunicación",
-      "Docencia",
-      "Estadística",
-      "Trabajo colaborativo",
-    ],
-  },
-  {
-    period: "2025",
-    title: "Ayudante de Estadística y Probabilidades",
-    institution: "Universidad del Bío-Bío",
-    category: "Ayudantía",
-    description:
-      "Apoyo en contenidos de probabilidad, estadística descriptiva e inferencial para estudiantes universitarios.",
-    responsibilities: [
-      "Desarrollo de ejercicios de probabilidad y estadística.",
-      "Apoyo en clases prácticas.",
-      "Revisión de procedimientos y resultados.",
-      "Preparación de material complementario.",
-    ],
-    skills: [
-      "Probabilidad",
-      "Inferencia",
-      "R",
-      "Resolución de problemas",
-    ],
-  },
+  period: "2025",
+  title: "Ayudante de Introducción a la Ingeniería Estadística",
+  institution: "Universidad del Bío-Bío",
+  category: "Docencia universitaria",
+  description:
+    "Apoyo académico en el curso Introducción a la Ingeniería Estadística, colaborando en la elaboración de material docente y en el desarrollo de actividades evaluativas para estudiantes de primer año.",
+  responsibilities: [
+    "Elaboración y adaptación de material académico en LaTeX.",
+    "Apoyo en la preparación de controles y evaluaciones.",
+    "Resolución de consultas de estudiantes.",
+    "Colaboración en actividades docentes del curso.",
+  ],
+  skills: [
+    "LaTeX",
+    "Docencia universitaria",
+    "Comunicación",
+    "Planificación académica",
+  ],
+},
+{
+  period: "2025",
+  title: "Ayudante de Estadística y Probabilidades",
+  institution: "Universidad del Bío-Bío",
+  category: "Docencia universitaria",
+  description:
+    "Apoyo docente en el curso de Estadística y Probabilidades mediante tutorías, resolución de consultas y colaboración en actividades de evaluación.",
+  responsibilities: [
+    "Realización de tutorías para estudiantes.",
+    "Resolución de dudas sobre contenidos del curso.",
+    "Apoyo en controles y evaluaciones.",
+    "Orientación en la resolución de ejercicios.",
+  ],
+  skills: [
+    "Probabilidad",
+    "Inferencia estadística",
+    "Docencia universitaria",
+    "Comunicación",
+  ],
+},
+{
+  period: "2024",
+  title: "Ayudante de Estadística",
+  institution: "Universidad del Bío-Bío",
+  category: "Docencia universitaria",
+  description:
+    "Apoyo docente en contenidos de estadística descriptiva e inferencial para estudiantes de pregrado.",
+  responsibilities: [
+    "Apoyo en estadística descriptiva e inferencial.",
+    "Resolución de ejercicios y consultas.",
+    "Tutorías para estudiantes.",
+    "Colaboración en actividades académicas.",
+  ],
+  skills: [
+    "Estadística descriptiva",
+    "Inferencia estadística",
+    "Docencia universitaria",
+    "Resolución de problemas",
+  ],
+},
+{
+  period: "2024",
+  title: "Ayudante de Series de Tiempo",
+  institution: "Universidad del Bío-Bío",
+  category: "Docencia universitaria",
+  description:
+    "Colaboración docente en la revisión y evaluación de actividades académicas del curso de Series de Tiempo.",
+  responsibilities: [
+    "Revisión y corrección de tareas.",
+    "Corrección de controles y certámenes.",
+    "Apoyo a estudiantes en contenidos del curso.",
+    "Retroalimentación sobre evaluaciones.",
+  ],
+  skills: [
+    "Series de tiempo",
+    "Análisis estadístico",
+    "Evaluación académica",
+    "Docencia universitaria",
+  ],
+},
+{
+  period: "2023",
+  title: "Ayudante de Modelos Lineales",
+  institution: "Universidad del Bío-Bío",
+  category: "Docencia universitaria",
+  description:
+    "Apoyo docente en el curso de Modelos Lineales mediante revisión de evaluaciones y acompañamiento académico a estudiantes.",
+  responsibilities: [
+    "Revisión y corrección de tareas.",
+    "Corrección de controles y certámenes.",
+    "Apoyo en contenidos de modelos lineales.",
+    "Resolución de consultas de estudiantes.",
+  ],
+  skills: [
+    "Modelos lineales",
+    "Regresión",
+    "Docencia universitaria",
+    "Evaluación académica",
+  ],
+},
 ];
 
 const experienceAreas = [
@@ -394,6 +485,62 @@ export default function ExperienciaPage() {
               </div>
             </div>
           </Card>
+
+
+{/* Galería profesional */}
+
+<div className="mt-16">
+  <div className="mb-8">
+    <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-400">
+      Galería
+    </p>
+
+    <h2 className="mt-3 text-3xl font-bold tracking-tight">
+      Momentos de mi trayectoria
+    </h2>
+
+    <p className="mt-4 max-w-3xl text-slate-400">
+      Algunas fotografías que representan experiencias relevantes en docencia,
+      investigación y desarrollo profesional.
+    </p>
+  </div>
+
+  <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+    {gallery.map((photo) => (
+      <Card
+        key={photo.title}
+        interactive
+        className="overflow-hidden p-0"
+      >
+        <img
+          src={photo.image}
+          alt={photo.title}
+          className="h-64 w-full object-cover transition duration-500 hover:scale-105"
+        />
+
+        <div className="p-6">
+          <div className="flex items-center justify-between">
+            <h3 className="font-semibold">
+              {photo.title}
+            </h3>
+
+            <span className="text-sm text-cyan-400">
+              {photo.year}
+            </span>
+          </div>
+
+          <p className="mt-3 text-sm leading-6 text-slate-400">
+            {photo.description}
+          </p>
+        </div>
+      </Card>
+    ))}
+  </div>
+</div>
+
+
+
+
         </Container>
       </section>
 
